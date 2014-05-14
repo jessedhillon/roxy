@@ -1,0 +1,6 @@
+{% extends 'layout.jinja2' %}
+
+{% block content %}
+    <h1>Page {{ content.title }}</h1>
+    {% include '/content_block.jinja2' %}
+{% endblock content %}

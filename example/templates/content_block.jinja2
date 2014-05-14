@@ -1,0 +1,8 @@
+<hr/>
+<div class="body">{{ content.body | render }}</div>
+<div class="meta">
+    <p>{% for t in content.tags %}
+        <a href="{{ t | route }}">{{ t.name }}</a>
+       {% endfor %}
+    </p>
+</div>

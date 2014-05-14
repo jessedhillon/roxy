@@ -1,0 +1,29 @@
+{% extends 'layout.jinja2' %}
+
+{% block content %}
+    <h1>Home</h1>
+    <h2>Posts</h2>
+    <ul>
+        {% for p in posts -%}
+            <li><a href="{{ p | route(true) }}">{{ p.title }} - {{ p | route }}</a> - 
+                {% if p.likes %}
+                    Likes: {{ p.likes }}
+                {% endif %}
+            </li>
+        {%- endfor %}
+    </ul>
+
+    <h2>Pages</h2>
+    <ul>
+        {% for p in pages -%}
+            <li><a href="{{ p | route(true) }}">{{ p.title }} - {{ p | route }}</a></li>
+        {%- endfor %}
+    </ul>
+
+    <h2>Awesome, Dude</h2>
+    <ul>
+        {% for p in awesome -%}
+            <li><a href="{{ p | route(true) }}">{{ p.title }} - {{ p | route }}</a></li>
+        {%- endfor %}
+    </ul>
+{% endblock content %}

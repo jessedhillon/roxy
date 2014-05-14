@@ -1,0 +1,10 @@
+{% extends 'layout.jinja2' %}
+
+{% block content %}
+    <h1>{{ tag.name }} index</h1>
+    <ul>
+        {% for c in tag.content -%}
+            <li>{{ c.title }}</li>
+        {%- endfor %}
+    </ul>
+{% endblock content %}
