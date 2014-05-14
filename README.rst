@@ -6,18 +6,22 @@ The first static site generator to matter
 Usage
 -----
 
-- After installing, copy and modify the example :literal:`site.ini` with your appropriate values:
-  - In a section called :literal:`[roxy]`
-    - :literal:`timezone` should be the name of an `IANA Database entry <https://en.wikipedia.org/wiki/Tz_database>`_, like :literal:`America/Los_Angeles`
-  - In a section labeled :literal:`[site:site-identifier]` where :literal:`site-identifier` can pretty much be anything
-    - :literal:`name` the name of your site
-    - :literal:`url` the URL for your site (purely for cosmetic purposes)
-    - :literal:`url_base` the base URL from which absolute URLs will be generated
-    - :literal:`generator` the qualified name of a Python module which will act as the generator for this site, see below
-    - :literal:`content_source_path` the location of source documents
-    - :literal:`asset_source_path` the location of source assets
-    - :literal:`template_path` the location of `Jinja2 <http://jinja.pocoo.org/docs/>`_ templates
-    - :literal:`build_path` the location where generated documents will be written
+After installing, copy and modify the example :literal:`site.ini` with your appropriate values:
+
+- In a section called :literal:`[roxy]`
+
+  - :literal:`timezone` should be the name of an `IANA Database entry <https://en.wikipedia.org/wiki/Tz_database>`_, like :literal:`America/Los_Angeles`
+
+- In a section labeled :literal:`[site:site-identifier]` where :literal:`site-identifier` can pretty much be anything
+
+  - :literal:`name` the name of your site
+  - :literal:`url` the URL for your site (purely for cosmetic purposes)
+  - :literal:`url_base` the base URL from which absolute URLs will be generated
+  - :literal:`generator` the qualified name of a Python module which will act as the generator for this site, see below
+  - :literal:`content_source_path` the location of source documents
+  - :literal:`asset_source_path` the location of source assets
+  - :literal:`template_path` the location of `Jinja2 <http://jinja.pocoo.org/docs/>`_ templates
+  - :literal:`build_path` the location where generated documents will be written
 
 Then run::
 
@@ -33,8 +37,8 @@ Documents are formatted according to Markdown syntax, with one addition. Until a
     title: The Title of the Document
     slug: super-cool-thoughts
     date: 2014-05-12
-    tags: this,
-          that,
+    tags: this
+          that
           the other thing
     mood: cheerful
     eating: A sandwich
