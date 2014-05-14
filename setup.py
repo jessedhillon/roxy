@@ -19,7 +19,7 @@ deps = [
 
 setup(
     name='roxy',
-    version='0.0',
+    version='0.1',
     description='roxy site generator',
     long_description="\n\n".join([readme, changes]),
     classifiers=[
